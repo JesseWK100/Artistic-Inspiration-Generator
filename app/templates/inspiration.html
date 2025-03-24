@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Artistic Inspiration</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Your Artistic Inspiration</h1>
+  
+  <h2>Artwork</h2>
+  {% if artwork.error %}
+    <p class="error">{{ artwork.error }}</p>
+  {% else %}
+    <div class="artwork">
+      {% if artwork.primaryImageSmall %}
+        <img src="{{ artwork.primaryImageSmall }}" alt="{{ artwork.title }}">
+      {% else %}
+        <p>No image available.</p>
+      {% endif %}
+      <h3>{{ artwork.title }}</h3>
+      <p><strong>Artist:</strong> {{ artwork.artistDisplayName or "Unknown" }}</p>
+      <p><strong>Date:</strong> {{ artwork.objectDate or "N/A" }}</p>
+      <p><strong>Department:</strong> {{ artwork.department or "N/A" }}</p>
+    </div>
+  {% endif %}
+
+  <h2>Inspirational Quote</h2>
+  {% if quote.error %}
+    <p class="error">{{ quote.error }}</p>
+  {% else %}
+    <blockquote>
+      “{{ quote.content }}”
+      <footer>— {{ quote.author }}</footer>
+    </blockquote>
+  {% endif %}
+
+  <br>
+  <a href="/">Try Another</a>
+</body>
+</html>

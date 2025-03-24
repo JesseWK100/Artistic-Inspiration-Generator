@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2rem;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input, button {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #5a67d8;
+    color: white;
+    border: none;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+
+.artwork {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.artwork img {
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
